@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from userprofile import views
+from payroll import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    #path('', views.home, name='home'),
+    path('', include('userprofile.urls')),
     path('userprofile/', include('django.contrib.auth.urls')),
     path('userprofile/', include('userprofile.urls')),
+    path('timecard/', include('payroll.urls')),
 ]
