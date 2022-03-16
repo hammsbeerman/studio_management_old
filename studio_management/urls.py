@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from userprofile import views
 from payroll import views
+from customer import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +26,5 @@ urlpatterns = [
     path('userprofile/', include('django.contrib.auth.urls')),
     path('userprofile/', include('userprofile.urls')),
     path('timecard/', include('payroll.urls')),
+    path('customer/', include('customer.urls')),
 ]
