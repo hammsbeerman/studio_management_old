@@ -1,0 +1,27 @@
+This page is not used. It is referenced from unused code in /customers/views.py
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <center>
+    <h1>Add Customer</h1>
+    {% if submitted %}
+        Customer was added Successfully
+    {% else %}
+
+      <p>
+        <form action="" method=POST>
+          {% csrf_token %}
+          {{ form.as_p }}
+
+          {% if form2 %}
+
+          {{ form2.as_p }}
+
+          {% endif %}
+          <input type="submit" value="Submit" class="btn btn-secondary">
+
+        </form>
+    {% endif %}
+    </center>
+{% endblock %}

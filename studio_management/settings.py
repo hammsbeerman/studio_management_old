@@ -49,12 +49,13 @@ THIRD_PARTY_APPS = [
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOCAL_APPS = [
-    #'customers',
     'payroll',
     'userprofile',
     #'vendor',
-    #'workorder',
+    'workorder',
     'customer',
+    #'testing',
+    'inventory',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS + THIRD_PARTY_APPS

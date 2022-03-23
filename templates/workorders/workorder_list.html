@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Workorder List</h1>
+
+    <table class="table table-hover table-striped table-bordered">
+    {%  for Workorder in workorder_list %}
+
+
+      <tr>
+          <td>
+            <a href="{% url 'workorder-detail' Workorder.id %}">{{ Workorder }}</a>
+          </td>
+          <td align="right">
+            <a href="{% url 'workorder-update' Workorder.id %}" class="btn btn-outline-secondary btn-sm">Update</a>
+          </td>
+      </tr>
+
+
+    {% endfor %}
+    </table>
+
+{% endblock %}

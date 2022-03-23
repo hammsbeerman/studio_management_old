@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ workorder_info }}</h1>
+
+<table class="table table-hover table-striped table-bordered">
+
+  <tr>
+      <td>
+        Workorder Date:
+      </td>
+      <td align="left">
+        {{ workorder_info.date }}
+      </td>
+  </tr>
+  <tr>
+      <td>
+        Customer:
+      </td>
+      <td align="left">
+        {{ workorder_info.organization }}
+      </td>
+      <td>
+        Contact:
+      </td>
+      <td align="left">
+        {{ workorder_info.contact }}
+      </td>
+  </tr>
+  <tr>
+      <td>
+        Description:
+      </td>
+      <td colspan="3" align="left">
+        {{ workorder_info.description }}
+      </td>
+  </tr>
+  <tr>
+      <td>
+        Deadline:
+      </td>
+      <td align="left">
+        {{ workorder_info.deadline }}
+      </td>
+  </tr>
+  <tr>
+      <td>
+        Budget:
+      </td>
+      <td align="left">
+        {{ workorder_info.budget }}
+      </td>
+    <td>
+      Quoted Price:
+    </td>
+    <td align="left">
+      {{ workorder_info.quoted_price }}
+    </td>
+  </tr>
+</table>
+
+<a href = "{% url 'workorder-update'  workorder_info.id %}" class="btn btn-outline-secondary btn-sm">Update</a>
+{% endblock %}

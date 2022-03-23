@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <center>
+    <h1>{{ customer_info }}</h1>
+    <ul>
+      <li>Contact: {{ customer_info.contact }}</li>
+      <li>Address: {{ customer_info.address1 }}</li>
+      <li>Address: {{ customer_info.address2 }}</li>
+      <li>City: {{ customer_info.city }}</li>
+      <li>State: {{ customer_info.state }}</li>
+      <li>Zipcode: {{ customer_info.zipcode }}</li>
+      <li>Phone: {{ customer_info.phone1 }}</li>
+    </ul>
+    <p>
+
+    </center>
+
+  <a href = "{% url 'customer-update'  customer_info.id %}" class="btn btn-outline-secondary btn-sm">Update</a>
+  <a href="{% url 'add-cust-contact' customer_info.id %}" class="btn btn-outline-secondary btn-sm">Add Contact</a>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Contact Details</h1>
+<br/>
+
+  <ul>
+    <li>First Name: {{ contact_detail.fname }}</li>
+    <li>Last Name: {{ contact_detail.lname }}</li>
+    <li>Phone: {{ contact_detail.phone1 }}</li>
+    <li>Email: {{ contact_detail.email }}</li>
+  </ul>
+<p>
+  <a href = "{% url 'contact-update'  contact_detail.id %}" class="btn btn-outline-secondary btn-sm">Update</a>
+  {{ contact_detail.customer.id}}
+{% endblock %}

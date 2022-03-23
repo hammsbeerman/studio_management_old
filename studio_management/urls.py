@@ -27,4 +27,6 @@ urlpatterns = [
     path('userprofile/', include('userprofile.urls')),
     path('timecard/', include('payroll.urls')),
     path('customer/', include('customer.urls')),
+    path('workorders/', include('workorder.urls')),
+    #path('admin/', views.)
 ]

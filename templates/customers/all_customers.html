@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Customer List</h1>
+
+    <table class="table table-hover table-striped table-bordered">
+    {%  for Customer in all_customers %}
+
+
+      <tr>
+          <td>
+            <a href="{% url 'customer-detail' Customer.id %}">{{ Customer }}</a>
+          </td>
+          <td align="right">
+            <a href="{% url 'customer-update' Customer.id %}" class="btn btn-outline-secondary btn-sm">Update</a>
+          </td>
+      </tr>
+
+
+    {% endfor %}
+    </table>
+
+{% endblock %}

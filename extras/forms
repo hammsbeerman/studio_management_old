@@ -1,0 +1,19 @@
+Add Customer
+  Add Contact
+
+View Customer and all Contacts
+
+
+Add Workorder details
+  Add Material line item
+  View Workorder with material line items
+    allow update / delete by line
+    form to add material at bottom of invoice
+  Link to change invoice details
+
+
+
+Inventory
+  Internal Part Number
+  Category
+  Item
